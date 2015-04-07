@@ -2,6 +2,7 @@ FROM kuende/elixir:1.0.2
 
 RUN git clone https://github.com/teodor-pripoae/morannon.git /app
 WORKDIR /app
+RUN git checkout benchmark
 
 ENV MIX_ENV production
 RUN mix local.hex --force
